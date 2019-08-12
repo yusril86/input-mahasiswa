@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="809cf462-940f-46b3-aea7-3ed442b22f49">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from data]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nim" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="semester" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="0" width="595" height="64" uuid="ff67ab41-cfe1-44f8-bbdf-aa9193753192"/>
+				<imageExpression><![CDATA["wood.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="5" width="263" height="33" uuid="af181f66-07b1-451e-8225-b532b19a2564"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Wood Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="63" y="39" width="200" height="22" forecolor="#FFFFFF" uuid="d650fad8-786b-4fa7-b412-d21b411e40b0"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Wood SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="4c4075dc-898d-48f0-9c81-9d4baab8c846"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="92" height="15" uuid="3c70b107-78d3-454d-b85f-ef8dcdd414a2"/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="92" y="19" width="92" height="15" uuid="f078b062-8191-471d-afcc-230095973bac"/>
+				<text><![CDATA[nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="184" y="19" width="92" height="15" uuid="56ad979c-d781-4715-994f-5e2c5746c8d5"/>
+				<text><![CDATA[nim]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="92" height="15" uuid="da9b17f6-17d9-492f-bafc-6de2b1f7c82c"/>
+				<text><![CDATA[kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="368" y="19" width="92" height="15" uuid="2c8bbde1-6516-4166-8488-7d68d548d5b1"/>
+				<text><![CDATA[semester]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="460" y="19" width="92" height="15" uuid="4c269075-c91c-4fb5-b5e0-ed9df6126c03"/>
+				<text><![CDATA[status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="8e20f6af-0046-4940-8e4b-49e9f99af8db"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="92" height="15" uuid="5d9cf168-7ac9-40ae-9c0e-02fd772186da"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="92" y="0" width="92" height="15" uuid="1e4458f5-7bbe-42b4-b06a-33a56382d77f"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="184" y="0" width="92" height="15" uuid="b11876ed-a816-4159-97f1-dd29397c3662"/>
+				<textFieldExpression><![CDATA[$F{nim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="92" height="15" uuid="333a00b5-28a4-4d56-9c99-ea637a827bb5"/>
+				<textFieldExpression><![CDATA[$F{kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="368" y="0" width="92" height="15" uuid="e5c7bff3-970b-4227-89ef-b9747d652111"/>
+				<textFieldExpression><![CDATA[$F{semester}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="460" y="0" width="92" height="15" uuid="75440faa-7628-4e53-a192-079978c617e1"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="29509927-ba3b-490e-a863-15a77b20f3cf"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="e1b80129-6a4c-4656-86e0-011bdd25ba71"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="a131e565-2ad6-4cd4-989f-7c7a86174d31"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="82530902-5bcd-45b7-a6f2-f0f8d6aee783"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
